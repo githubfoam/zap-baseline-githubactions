@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "ZAP Full Scan"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
         # https://github.com/OWASP/OWASP-VWAD/blob/master/src/data/online.json
           target: 'http://testphp.vulnweb.com'    
@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "ZAP Full Scan http://testphp.vulnweb.com"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
@@ -36,7 +36,7 @@ jobs:
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
       - name: "ZAP Full Scan http://demo.testfire.net/"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
@@ -45,7 +45,7 @@ jobs:
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'          
       - name: "ZAP Full Scan https://dvwa.co.uk/"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
@@ -54,7 +54,7 @@ jobs:
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
       - name: "ZAP Full Scan https://ctflearn.com/"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
@@ -63,7 +63,7 @@ jobs:
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'          
       - name: "ZAP Full Scan https://ctflearn.com/"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
@@ -72,7 +72,7 @@ jobs:
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a' 
       - name: "ZAP Full Scan https://www.gameofhacks.com/"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
@@ -81,7 +81,7 @@ jobs:
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'           
       - name: "ZAP Full Scan https://public-firing-range.appspot.com/"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
@@ -90,7 +90,7 @@ jobs:
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
       - name: "ZAP Full Scan http://google-gruyere.appspot.com/"
-        uses: zaproxy/action-full-scan@v0.3.0
+        uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'

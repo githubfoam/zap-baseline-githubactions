@@ -12,10 +12,10 @@ jobs:
 
 # https://github.com/marketplace/actions/owasp-zap-full-scan
  ubuntu-latest-zap-full-basic-job:
-    name: "basic -The OWASP ZAP Full Scan to perform Dynamic Application Security Testing (DAST) ubuntu latest"
+    name: "basic -The OWASP ZAP Baseline Scan to perform Dynamic Application Security Testing (DAST) ubuntu latest"
     runs-on: ubuntu-latest
     steps:
-      - name: "ZAP Full Scan"
+      - name: "ZAP Baseline Scan"
         uses: zaproxy/action-baseline@v0.6.1
         with:
         # https://github.com/OWASP/OWASP-VWAD/blob/master/src/data/online.json
@@ -23,10 +23,10 @@ jobs:
 
 # https://github.com/marketplace/actions/owasp-zap-full-scan
  ubuntu-latest-zap-full-advanced-job:
-    name: "advanced - The OWASP ZAP Full Scan to perform Dynamic Application Security Testing (DAST) ubuntu latest"
+    name: "advanced - The OWASP ZAP Baseline Scan to perform Dynamic Application Security Testing (DAST) ubuntu latest"
     runs-on: ubuntu-latest
     steps:
-      - name: "ZAP Full Scan http://testphp.vulnweb.com"
+      - name: "ZAP Baseline Scan http://testphp.vulnweb.com"
         uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
           target: 'http://testphp.vulnweb.com'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-      - name: "ZAP Full Scan http://demo.testfire.net/"
+      - name: "ZAP Baseline Scan http://demo.testfire.net/"
         uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
           target: 'http://demo.testfire.net/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'          
-      - name: "ZAP Full Scan https://dvwa.co.uk/"
+      - name: "ZAP Baseline Scan https://dvwa.co.uk/"
         uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -53,7 +53,7 @@ jobs:
           target: 'https://dvwa.co.uk/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-      - name: "ZAP Full Scan https://ctflearn.com/"
+      - name: "ZAP Baseline Scan https://ctflearn.com/"
         uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -62,7 +62,7 @@ jobs:
           target: 'https://ctflearn.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'          
-      - name: "ZAP Full Scan https://ctflearn.com/"
+      - name: "ZAP Baseline Scan https://ctflearn.com/"
         uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -71,7 +71,7 @@ jobs:
           target: 'https://ctflearn.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a' 
-      - name: "ZAP Full Scan https://www.gameofhacks.com/"
+      - name: "ZAP Baseline Scan https://www.gameofhacks.com/"
         uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -80,7 +80,7 @@ jobs:
           target: 'https://www.gameofhacks.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'           
-      - name: "ZAP Full Scan https://public-firing-range.appspot.com/"
+      - name: "ZAP Baseline Scan https://public-firing-range.appspot.com/"
         uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -89,7 +89,7 @@ jobs:
           target: 'https://public-firing-range.appspot.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-      - name: "ZAP Full Scan http://google-gruyere.appspot.com/"
+      - name: "ZAP Baseline Scan http://google-gruyere.appspot.com/"
         uses: zaproxy/action-baseline@v0.6.1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

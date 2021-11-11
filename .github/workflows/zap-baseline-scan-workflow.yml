@@ -1,4 +1,4 @@
-name: "ZAP Full Scan CI workflow"
+name: "ZAP Baseline Scan CI workflow"
 
 
 on:
